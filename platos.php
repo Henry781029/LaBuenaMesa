@@ -73,5 +73,15 @@ class platos
 
     }
 
+    public function borrarPlato()
+    {
+    $consulta = "DELETE FROM " . $this->bd_table . " WHERE idPlato = " . $this->idplato;
+    $this->bd->query($consulta);
+    if($this->bd->affected_rows > 0){
+        return true;
+    }
+    return false;
+
+    }
 
 }
