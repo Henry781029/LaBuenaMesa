@@ -4,9 +4,9 @@ class Bdata
     public $bd;
     public function getConnection()
     {
-        $this->$bd = null;
+        $this->bd = null;
         try{
-            $this->$bd = new mysqli('localhost', 'root', '', 'restaurante');
+            $this->bd = new mysqli('localhost', 'root', '', 'restaurante');
         }catch(Exception $e){
             echo "La base de datos no se conecto" . $e->getMessage();
         }
