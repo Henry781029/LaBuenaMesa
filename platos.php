@@ -44,8 +44,7 @@ class platos
 
     public function recuperarRegistroplato()
     {
-    $consulta = "SELECT idPlato, nombre, descripcion, precio, created FROM " . $this->bd_table . "WHERE idPlato = " . $this->idplato;
-    
+    $consulta = "SELECT idPlato, nombre, descripcion, precio, created FROM " . $this->bd_table . " WHERE idPlato = " . $this->idplato;
     $buscar = $this->bd->query($consulta);
     $dataRow = $buscar->fetch_assoc();
     $this->nombre = $dataRow['nombre'];
